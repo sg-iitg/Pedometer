@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "614010846567",
+    "project_id": "final-project-7c669",
+    "storage_bucket": "final-project-7c669.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614010846567:android:a779b5ad5326a977b743c2",
+        "android_client_info": {
+          "package_name": "com.j4velin.pedometer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "614010846567-fku9oai6g3p0pjsdbmh5qe38jgp7lga7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHZzg2Z4fdEcwb366OKdgvKk9BIrPq9Ag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "614010846567-fku9oai6g3p0pjsdbmh5qe38jgp7lga7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

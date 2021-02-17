@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.j4velin.pedometer.PEDOMETER.ui.Fragment_Overview">
+
+    <org.eazegraph.lib.charts.PieChart
+        android:id="@+id/graph"
+        android:layout_width="wrap_content"
+        android:layout_height="301dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="115dp"
+        app:egHighlightStrength="1"
+        app:egInnerPadding="75"
+        app:egLegendHeight="0dp" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="50dp"
+        android:textColor="#F99E2B"
+        android:textFontWeight="700"/>
+    <TextView
+        android:id="@+id/steps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="45sp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chronometer"
+        android:layout_centerHorizontal="true"
+        android:text="Your Time"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/averageandtotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/graph"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/average"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/averageandtotaltext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/averageandtotal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/average" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/total" />
+    </LinearLayout>
+
+    <org.eazegraph.lib.charts.BarChart xmlns:eaze="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bargraph"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/averageandtotaltext"
+        android:layout_marginTop="50dp"
+        eaze:egLegendHeight="35dp"
+        eaze:egShowValues="true" />
+
+<!--    <Chronometer-->
+<!--        android:id="@+id/chronometer"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/bargraph"-->
+<!--        android:textSize="50sp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="time" />-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/graph"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/buttons">
+
+        <Button
+            android:id="@+id/startstop"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:text="START"
+            android:background="@drawable/round_button"
+            android:textColor="#FFFFFF"
+            android:textFontWeight="700"
+            android:textSize="30dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <Button
+            android:id="@+id/stopbtn"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:text="STOP"
+            android:background="@drawable/round_button"
+            android:textColor="#FFFFFF"
+            android:textFontWeight="700"
+            android:textSize="30dp"            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/buttons"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/share"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:text="@string/share"
+            android:background="@drawable/round_button"
+            android:textColor="#FFFFFF"
+            android:textFontWeight="700"
+            android:textSize="30dp"            />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/prithvi" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/steps"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="307dp"
+        android:layout_marginTop="-71dp"
+        android:layout_marginEnd="27dp"
+        tools:src="@tools:sample/avatars" />
+
+</RelativeLayout>
+
